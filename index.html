@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Brittany Ohalete</title>
+    <script type="text/javascript" language="javascript" src="mylib.js"></script>
+</head>
+<style>
+  @font-face { font-family: LemonMilk; src: url('fonts/LemonMilk.otf'); }
+  @font-face { font-family: NeouThin; src: url('fonts/Neou-Thin.otf'); }
+  @font-face { font-family: NeouBold; src: url('fonts/Neou-Bold.ttf'); }
+  @font-face { font-family: Avenir; src: url('fonts/Avenir.ttc'); }
+    h1{
+      font-size: 200%;
+      font-family: LemonMilk;
+    }
+
+    h2{
+      font-size: 100%;
+      font-family: NeouBold;
+    }
+    h3{
+      font-size: 80%;
+      font-family: NeouThin;
+    }
+    h4{
+      font-size: 70%;
+      font-family: NeouBold;
+    }
+    p{
+      font-size: 60%;
+      font-family: Avenir;
+    }
+    div{
+      padding-top:2%;
+    }
+
+    .header{
+      text-align: center;
+    }
+
+    .menu ul{
+      display: inline-block;
+      width: 100%;
+      font-size: 50%;
+      font-weight: bold;
+    }
+
+    .menu{
+      background-color: #ffa24b;
+      color: #ffffff;
+      background-image: url("images/Awesome-Pink-Gradient-Wallpaper.jpg");
+
+    }
+
+    .menu li {
+    font-family: NeouBold;
+    margin: 0 4% 0 4%;
+    float:left;
+    list-style:none;
+}
+    .header {
+    background-color:#F8F8F8;
+    float: none;
+    }
+
+  .container {
+    margin: auto;
+    width: 70%;
+    box-shadow: 0px 0px 40px grey;
+    background-color: white;
+    padding: 1%;
+  }
+
+  .goButton{
+    border: none;
+    width:30%;
+    text-align:center;
+    left: 35%;
+    position: relative;
+    font-family: LemonMilk;
+    margin: 1% 0 3 0%;
+  }
+ form{
+   font-family: LemonMilk;
+ }
+
+ .myInfo{
+   float: left;
+ }
+
+
+
+</style>
+  <body background="images/Awesome-Pink-Gradient-Wallpaper.jpg">
+    <div class="container">
+    <div class="header">
+      <h1 >Brittany Ohalete</h1>
+      <div class="menu">
+        <ul>
+          <li>HOME</li>
+          <li>COURSES</li>
+          <li>PROJECTS</li>
+          <li>HOBBY</li>
+          <li>FRIENDS</li>
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      <div class="myInfo">
+      <img src="images/37316835801_79c7b767ea_k.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 40%; float:left; border: 5px solid black;">
+      <div style="padding-top:0; width:-50%;">
+        <h1 style="background-color:black; color: white;">Brittany Ohalete</h3>
+        <h2>Student, Howard University'19</h1>
+        <p>My name is Brittany Ohalete and I'm a junior computer science major from Houston,TX.
+            I have a strong interest in UX/UI as well as a curiosity for Cyber Security. I hope to
+            continue my current freelance business <i>BOPHO Designs</i> to be a multimedia consulting company
+            for start ups</p>
+            <br>
+        <h4><b>Email:</b> brittanyohalete96@gmail.com
+          <br><b>Phone:</b> (281)-781-5804
+          <br><b>Website:</b> <a href="https://wwww.bophodesigns.com" >BOPHO Designs</a>
+          <br>
+        </div></div>
+          <br><form name="feedbackform" style="padding-top: 40%;">
+            First Name: <input type="text" name="fname" style="width: 100%;"><br>
+            Last Name: <input type="text" name="lname" style="width: 100%;"><br>
+            Email Address: <input type="text" name="email" style="width: 100%;"><br>
+            Re-enter Email: <input type="text" name="email" style="width: 100%;"><br>
+            Tel Number: <input type="text" name="telnum" style="width: 100%;"><br>
+            Comments: <input type="text" name="comments" style="width: 100%;"><br>
+            <input class="goButton" type="button" value="Go" onclick="goFunc();">
+          </form></li>
+    </div>
+  </body>
+</html>
