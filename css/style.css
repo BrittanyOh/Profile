@@ -1,0 +1,89 @@
+<style>
+  @font-face { font-family: LemonMilk; src: url('../fonts/LemonMilk.otf'); }
+  @font-face { font-family: NeouThin; src: url('../fonts/Neou-Thin.otf'); }
+  @font-face { font-family: NeouBold; src: url('../fonts/Neou-Bold.ttf'); }
+  @font-face { font-family: Avenir; src: url('../fonts/Avenir.ttc'); }
+
+  a{
+    text-decoration: none;
+  }
+    h1{
+      font-size: 200%;
+      font-family: LemonMilk;
+    }
+
+    h2{
+      font-size: 100%;
+      font-family: NeouBold;
+    }
+    h3{
+      font-size: 80%;
+      font-family: NeouThin;
+    }
+    h4{
+      font-size: 70%;
+      font-family: NeouBold;
+    }
+    p{
+      font-size: 60%;
+      font-family: Avenir;
+    }
+    div{
+      padding-top:2%;
+    }
+
+    .header{
+      text-align: center;
+    }
+
+    .menu ul{
+      display: inline-block;
+      width: 100%;
+      font-size: 50%;
+      font-weight: bold;
+    }
+
+    .menu{
+      background-color: #ffa24b;
+      color: #ffffff;
+      background-image: url("images/Awesome-Pink-Gradient-Wallpaper.jpg");
+
+    }
+
+    .menu li {
+    font-family: NeouBold;
+    margin: 0 4% 0 4%;
+    float:left;
+    list-style:none;
+}
+    .header {
+    background-color:#F8F8F8;
+    float: none;
+    }
+
+  .container {
+    margin: auto;
+    width: 70%;
+    box-shadow: 0px 0px 40px grey;
+    background-color: white;
+    padding: 1%;
+  }
+
+  .goButton{
+    border: none;
+    width:30%;
+    text-align:center;
+    left: 35%;
+    position: relative;
+    font-family: LemonMilk;
+    margin: 1% 0 3 0%;
+  }
+ form{
+   font-family: LemonMilk;
+ }
+
+ .myInfo{
+   float: left;
+ }
+
+</style>
