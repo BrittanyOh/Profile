@@ -1,3 +1,7 @@
+function openAnchor(anchor){
+  document.container.getElementById(anchor).show();
+}
+
 function goFunc(){
   window.alert('Hello '+ document.feedbackform.fname.value + ' ' + document.feedbackform.lname.value
   + '\n Email: ' + document.feedbackform.email.value

@@ -2,6 +2,20 @@
   <head>
     <title>Brittany Ohalete</title>
     <script type="text/javascript" language="javascript" src="mylib.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".anchor").hide();
+
+      $('a[href^="#"]').on('click', function(event) {
+           var target = $(this).attr('href');
+
+           $('.anchor'+target).slideToggle();
+           document.location = 'http://localhost:8000/index.html'+target;
+       });
+
+    });
+    </script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
     @font-face { font-family: LemonMilk; src: url('../fonts/LemonMilk.otf'); }
@@ -14,14 +28,14 @@
   <body background="img/PinkGradientBackground.jpg" style="background-attachment: fixed; overflow-y:scroll;
       overflow-x: hidden;">
       <div class="header">
-        <h1 style="text-align:center; font-size:300%;">Brittany Ohalete</h1>
+        <h1 style="text-align:center; font-size:350%;  letter-spacing:10px;">Brittany Ohalete</h1>
         <div class="menu">
           <ul>
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#courses">COURSES</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#hobby">HOBBY</a></li>
-            <li><a href="#friends">FRIENDS</a></li>
+            <li><a class="anchorLink" href="index.html" >HOME</a></li>
+            <li><a class="anchorLink" href="#courses">COURSES</a></li>
+            <li><a class="anchorLink" href="#projects">PROJECTS</a></li>
+            <li><a class="anchorLink" href="#hobby">HOBBY</a></li>
+            <li><a class="anchorLink" href="#friends">FRIENDS</a></li>
           </ul>
         </div>
       </div>
@@ -51,7 +65,7 @@
             Comments: <input type="text" name="comments" style="width: 100%;"><br>
             <input class="goButton" type="button" value="Go" onclick="goFunc();">
           </form></li></div>
-          <div id="courses"><h1 >Courses</h1>
+          <div id="courses" class="anchor"><h1 >Courses</h1>
           <ul>
           <li>Intro to Computer Science</li>
           <li>Technical Writing</li>
@@ -59,9 +73,9 @@
           <li>Intro to Cybersecurity</li>
           <li>Intro to Mobile App Development</li>
           <li>Computer Organization I</li></ul></div>
-          <div id="projects"><h1 >Projects</h1></div>
-          <div id="hobby"><h1 >Hobby</h1></div>
-          <div id="friends"><h1 >Friends</h1></div>
+          <div id="projects" class="anchor"><h1 >Projects</h1></div>
+          <div id="hobby" class="anchor"><h1 >Hobby</h1></div>
+          <div id="friends" class="anchor"><h1 >Friends</h1></div>
     </div>
   </body>
 </html>
