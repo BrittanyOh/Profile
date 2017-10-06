@@ -2,27 +2,35 @@
   <head>
     <title>Brittany Ohalete</title>
     <script type="text/javascript" language="javascript" src="mylib.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+    @font-face { font-family: LemonMilk; src: url('../fonts/LemonMilk.otf'); }
+    @font-face { font-family: NeouThin; src: url('../fonts/Neou-Thin.otf'); }
+    @font-face { font-family: NeouBold; src: url('../fonts/Neou-Bold.ttf'); }
+    @font-face { font-family: Avenir; src: url('../fonts/Avenir.ttc'); }
+    </style>
+
 </head>
-  <body background="images/Awesome-Pink-Gradient-Wallpaper.jpg">
-    <div class="container">
-    <div class="header">
-      <h1 >Brittany Ohalete</h1>
-      <div class="menu">
-        <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#courses">COURSES</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#hoby">HOBBY</a></li>
-          <li><a href="#friends">FRIENDS</a></li>
-        </ul>
+  <body background="img/PinkGradientBackground.jpg" style="background-attachment: fixed; overflow-y:scroll;
+      overflow-x: hidden;">
+      <div class="header">
+        <h1 style="text-align:center; font-size:300%;">Brittany Ohalete</h1>
+        <div class="menu">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#courses">COURSES</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#hobby">HOBBY</a></li>
+            <li><a href="#friends">FRIENDS</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="content" id="home">
+    <div class="container" >
+    <div class="content" id="home" style="padding:1%;">
       <div class="myInfo">
-      <img src="images/37316835801_79c7b767ea_k.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 40%; float:left; border: 5px solid black;">
+      <img src="img/profilePic.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 40%; float:left; border: 5px solid black; border-image: url('../img/PinkGradientBackground.jpg') 30 round; background-attachment:fixed;">
       <div style="padding-top:0; width:-50%;">
-        <h1 style="background-color:black; color: white;">Brittany Ohalete</h3>
+        <h1 style="background-image: url('../img/PinkGradientBackground.jpg'); background-attachment:fixed; color: white;">Brittany Ohalete</h3>
         <h2>Student, Howard University'19</h1>
         <p>My name is Brittany Ohalete and I'm a junior computer science major from Houston,TX.
             I have a strong interest in UX/UI as well as a curiosity for Cyber Security. I hope to
@@ -34,7 +42,7 @@
           <br><b>Website:</b> <a href="https://wwww.bophodesigns.com" >BOPHO Designs</a>
           <br>
         </div></div>
-          <br><form name="feedbackform" style="padding-top: 40%;">
+          <br><form name="feedbackform" style="padding-top: 40%; padding:1%;">
             First Name: <input type="text" name="fname" style="width: 100%;"><br>
             Last Name: <input type="text" name="lname" style="width: 100%;"><br>
             Email Address: <input type="text" name="email" style="width: 100%;"><br>
@@ -42,11 +50,18 @@
             Tel Number: <input type="text" name="telnum" style="width: 100%;"><br>
             Comments: <input type="text" name="comments" style="width: 100%;"><br>
             <input class="goButton" type="button" value="Go" onclick="goFunc();">
-          </form></li>
-          <div id="courses"></div>
-          <div id="projects"></div>
-          <div id="hobby"></div>
-          <div id="friends"></div>
+          </form></li></div>
+          <div id="courses"><h1 >Courses</h1>
+          <ul>
+          <li>Intro to Computer Science</li>
+          <li>Technical Writing</li>
+          <li>Discrete Structures</li>
+          <li>Intro to Cybersecurity</li>
+          <li>Intro to Mobile App Development</li>
+          <li>Computer Organization I</li></ul></div>
+          <div id="projects"><h1 >Projects</h1></div>
+          <div id="hobby"><h1 >Hobby</h1></div>
+          <div id="friends"><h1 >Friends</h1></div>
     </div>
   </body>
 </html>

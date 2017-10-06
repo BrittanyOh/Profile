@@ -33,27 +33,50 @@
     }
 
     .header{
-      text-align: center;
+      margin: auto;
+      width: 70%;
+      box-shadow: 0px 10px 10px -9px #4E4E4E;
+      background-image: url("../img/ContentGradient.jpg");
+      background-attachment: fixed;
+      position: fixed;
+      left:15%;
     }
 
     .menu ul{
       display: inline-block;
-      width: 100%;
-      font-size: 50%;
+      min-width: 100%;
+      font-size: 80%;
       font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .menu a:link {
+      color: white;
+    }
+
+    .menu a:visited{
+      color: white;
+    }
+
+    .menu a:hover{
+      color: black;
+    }
+
+    .menu a:active{
+      color: red;
     }
 
     .menu{
       background-color: #ffa24b;
-      color: #ffffff;
-      background-image: url("images/Awesome-Pink-Gradient-Wallpaper.jpg");
+      background-image: url("../img/PinkGradientBackground.jpg");
 
     }
 
     .menu li {
     font-family: NeouBold;
-    margin: 0 4% 0 4%;
-    float:left;
+    margin: 0 5% 0 5%;
+    display: inline-block;
     list-style:none;
 }
     .header {
@@ -65,9 +88,13 @@
     margin: auto;
     width: 70%;
     box-shadow: 0px 0px 40px grey;
-    background-color: white;
-    padding: 1%;
-  }
+    position: absolute;
+    top: 27%;
+    left:15%;
+    z-index: -1;
+    background-image: url("../img/ContentGradient.jpg");
+    background-attachment: fixed;
+    }
 
   .goButton{
     border: none;
