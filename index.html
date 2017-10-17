@@ -6,14 +6,34 @@
     <script>
     $(document).ready(function(){
       $(".anchor").hide();
+      $(".slide").hide();
+
+      for(i=1; i<=3; i++){
+        for(i=0; i<60; i++){
+
+        }
+        $("#slide-"+i).show();
+
+      }
+
 
       $('a[href^="#"]').on('click', function(event) {
            var target = $(this).attr('href');
-
            $('.anchor'+target).slideToggle();
            document.location = 'http://localhost:8000/index.html'+target;
        });
 
+       $(document).keydown(function(e){
+         var optionTexts = [];
+         $(".anchorLink li").each(function() { optionTexts.push($(this).text()) });
+         for (var i in optionTexts){
+          console.log(optionTexts[i]);
+        }
+          if (e.keyCode == 37) {
+
+              }
+           e.preventDefault(); // prevent the default action (scroll / move caret));
+         });
     });
     </script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -25,11 +45,10 @@
     </style>
 
 </head>
-  <body background="img/PinkGradientBackground.jpg" style="background-attachment: fixed; overflow-y:scroll;
-      overflow-x: hidden;">
+  <body background="img/PinkGradientBackground.jpg" style="background-attachment: fixed;">
       <div class="header">
         <h1 style="text-align:center; font-size:350%;  letter-spacing:10px;">Brittany Ohalete</h1>
-        <div class="menu">
+        <div id="menu">
           <ul>
             <li><a class="anchorLink" href="index.html" >HOME</a></li>
             <li><a class="anchorLink" href="#courses">COURSES</a></li>
@@ -42,7 +61,7 @@
     <div class="container" >
     <div class="content" id="home" style="padding:1%;">
       <div class="myInfo">
-      <img src="img/profilePic.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 40%; float:left; border: 5px solid black; border-image: url('../img/PinkGradientBackground.jpg') 30 round; background-attachment:fixed;">
+      <img src="img/profilePic.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 25%; float:left; border: 5px solid black; border-image: url('../img/PinkGradientBackground.jpg') 30 round; background-attachment:fixed;">
       <div style="padding-top:0; width:-50%;">
         <h1 style="background-image: url('../img/PinkGradientBackground.jpg'); background-attachment:fixed; color: white;">Brittany Ohalete</h3>
         <h2>Student, Howard University'19</h1>
@@ -55,16 +74,13 @@
           <br><b>Phone:</b> (281)-781-5804
           <br><b>Website:</b> <a href="https://wwww.bophodesigns.com" >BOPHO Designs</a>
           <br>
-        </div></div>
-          <br><form name="feedbackform" style="padding-top: 40%; padding:1%;">
-            First Name: <input type="text" name="fname" style="width: 100%;"><br>
-            Last Name: <input type="text" name="lname" style="width: 100%;"><br>
-            Email Address: <input type="text" name="email" style="width: 100%;"><br>
-            Re-enter Email: <input type="text" name="email" style="width: 100%;"><br>
-            Tel Number: <input type="text" name="telnum" style="width: 100%;"><br>
-            Comments: <input type="text" name="comments" style="width: 100%;"><br>
-            <input class="goButton" type="button" value="Go" onclick="goFunc();">
-          </form></li></div>
+        </div>
+        <div class="slideshow">
+          <img class="slide" id="slide-1" src="../img/slide1.jpg" style="width: 100%">
+          <img class="slide" id="slide-2" src="../img/slide2.jpg" style="width: 100%">
+          <img class="slide" id="slide-3" src="../img/slide3.jpg" style="width: 100%">
+        </div>
+      </div>
           <div id="courses" class="anchor"><h1 >Courses</h1>
           <ul>
           <li>Intro to Computer Science</li>
@@ -77,5 +93,9 @@
           <div id="hobby" class="anchor"><h1 >Hobby</h1></div>
           <div id="friends" class="anchor"><h1 >Friends</h1></div>
     </div>
+    <div class="footer">
+      <h4>Created by Brittany Ohalete, 2017</h4>
+    </div>
+
   </body>
 </html>
