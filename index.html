@@ -1,101 +1,42 @@
 <!DOCTYPE html>
   <head>
-    <title>Brittany Ohalete</title>
+  <title>Brittany Ohalete</title>
     <script type="text/javascript" language="javascript" src="mylib.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <script>
     $(document).ready(function(){
-      $(".anchor").hide();
-      $(".slide").hide();
+    var slideIndex = 0;
+    slideshow();
+    function slideshow() {
+        var i;
+        var img = document.getElementsByClassName("imgSlides");
 
-      for(i=1; i<=3; i++){
-        for(i=0; i<60; i++){
-
+        for (i = 0; i < img.length; i++) {
+           img[i].style.display = "none";
         }
-        $("#slide-"+i).show();
-
+        slideIndex++;
+        if(slideIndex > img.length){slideIndex = 1}
+        img[slideIndex-1].style.display = "block";
+        setTimeout(slideshow, 5000);
       }
-
-
-      $('a[href^="#"]').on('click', function(event) {
-           var target = $(this).attr('href');
-           $('.anchor'+target).slideToggle();
-           document.location = 'http://localhost:8000/index.html'+target;
-       });
-
-       $(document).keydown(function(e){
-         var optionTexts = [];
-         $(".anchorLink li").each(function() { optionTexts.push($(this).text()) });
-         for (var i in optionTexts){
-          console.log(optionTexts[i]);
-        }
-          if (e.keyCode == 37) {
-
-              }
-           e.preventDefault(); // prevent the default action (scroll / move caret));
-         });
     });
     </script>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <style>
-    @font-face { font-family: LemonMilk; src: url('../fonts/LemonMilk.otf'); }
-    @font-face { font-family: NeouThin; src: url('../fonts/Neou-Thin.otf'); }
-    @font-face { font-family: NeouBold; src: url('../fonts/Neou-Bold.ttf'); }
-    @font-face { font-family: Avenir; src: url('../fonts/Avenir.ttc'); }
-    </style>
-
-</head>
-  <body background="img/PinkGradientBackground.jpg" style="background-attachment: fixed;">
-      <div class="header">
-        <h1 style="text-align:center; font-size:350%;  letter-spacing:10px;">Brittany Ohalete</h1>
-        <div id="menu">
-          <ul>
-            <li><a class="anchorLink" href="index.html" >HOME</a></li>
-            <li><a class="anchorLink" href="#courses">COURSES</a></li>
-            <li><a class="anchorLink" href="#projects">PROJECTS</a></li>
-            <li><a class="anchorLink" href="#hobby">HOBBY</a></li>
-            <li><a class="anchorLink" href="#friends">FRIENDS</a></li>
-          </ul>
-        </div>
-      </div>
-    <div class="container" >
-    <div class="content" id="home" style="padding:1%;">
-      <div class="myInfo">
-      <img src="img/profilePic.jpg" alt="profile-picture"style="margin: 0 2% 0 1%; width: 25%; float:left; border: 5px solid black; border-image: url('../img/PinkGradientBackground.jpg') 30 round; background-attachment:fixed;">
-      <div style="padding-top:0; width:-50%;">
-        <h1 style="background-image: url('../img/PinkGradientBackground.jpg'); background-attachment:fixed; color: white;">Brittany Ohalete</h3>
-        <h2>Student, Howard University'19</h1>
-        <p>My name is Brittany Ohalete and I'm a junior computer science major from Houston,TX.
-            I have a strong interest in UX/UI as well as a curiosity for Cyber Security. I hope to
-            continue my current freelance business <i>BOPHO Designs</i> to be a multimedia consulting company
-            for start ups</p>
-            <br>
-        <h4><b>Email:</b> brittanyohalete96@gmail.com
-          <br><b>Phone:</b> (281)-781-5804
-          <br><b>Website:</b> <a href="https://wwww.bophodesigns.com" >BOPHO Designs</a>
-          <br>
-        </div>
-        <div class="slideshow">
-          <img class="slide" id="slide-1" src="../img/slide1.jpg" style="width: 100%">
-          <img class="slide" id="slide-2" src="../img/slide2.jpg" style="width: 100%">
-          <img class="slide" id="slide-3" src="../img/slide3.jpg" style="width: 100%">
-        </div>
-      </div>
-          <div id="courses" class="anchor"><h1 >Courses</h1>
-          <ul>
-          <li>Intro to Computer Science</li>
-          <li>Technical Writing</li>
-          <li>Discrete Structures</li>
-          <li>Intro to Cybersecurity</li>
-          <li>Intro to Mobile App Development</li>
-          <li>Computer Organization I</li></ul></div>
-          <div id="projects" class="anchor"><h1 >Projects</h1></div>
-          <div id="hobby" class="anchor"><h1 >Hobby</h1></div>
-          <div id="friends" class="anchor"><h1 >Friends</h1></div>
+  </head>
+  <style>
+  body, html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+  </style>
+  <body background="img/ContentGradient.jpg" style="background-attachment: fixed;">
+    <div class="slideshow">
+      <a id="enter" href="home.html">E N T E R</a>
+      <img class="imgSlides" src="img/donut.gif" style="width:50; height:120%; margin-left: 25%;">
+      <!--
+      <img class="imgSlides" src="img/slide1.jpg">
+      <img class="imgSlides" src="img/slide2.jpg">
+      <img class="imgSlides" src="img/slide3.jpg">-->
     </div>
-    <div class="footer">
-      <h4>Created by Brittany Ohalete, 2017</h4>
-    </div>
-
   </body>
 </html>
